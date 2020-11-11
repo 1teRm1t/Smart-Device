@@ -1,0 +1,102 @@
+.about__wrap {
+  min-height: 320px;
+  margin: 11px 10% 90px 9.5%;
+  padding-left: 189px;
+
+  background-image: url("../img/about-year@1x.png");
+  background-repeat: no-repeat;
+  background-position: 11px 6px;
+  background-size: auto 312px;
+}
+
+.about__wrap h2 {
+  margin-bottom: 21px;
+
+  font-family: $main-regular;
+  font-size: 36px;
+  line-height: 51px;
+  color: $grey;
+}
+
+.about__wrap p {
+  margin-bottom: 21px;
+
+  font-family: $main;
+  font-size: 16px;
+  line-height: 22px;
+  color: $grey;
+
+  &:last-of-type {
+    margin-bottom: 38px;
+  }
+}
+
+.about__link {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 13.5px 50px;
+
+  font-family: $main-bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $blue;
+
+  border: 1px solid $blue;
+  border-radius: 5px;
+}
+
+@media (max-width: $tablet-width) {
+  .about__wrap {
+    margin: 0 3% 80px 2.3%;
+    padding: 6px 0 0 195px;
+
+    background-size: auto 355px;
+  }
+
+  .about__wrap h2 {
+    margin-left: -3px;
+    margin-bottom: 25px;
+
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  .about__wrap p {
+    max-height: 85px;
+    margin-bottom: 22px;
+
+    overflow: hidden;
+
+    &:last-of-type {
+      margin-bottom: 45px;
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .about__wrap {
+    margin: 0 5% 60px;
+    padding: 3px 0 0 0;
+
+    background-image: none;
+  }
+
+  .about__wrap h2 {
+    margin-left: -2px;
+    margin-bottom: 20px;
+
+    font-size: 28px;
+    line-height: 39px;
+  }
+
+  .about__wrap p {
+    max-height: 175px;
+    margin-bottom: 39px;
+
+    &:last-of-type {
+      margin-bottom: 30px;
+    }
+  }
+}

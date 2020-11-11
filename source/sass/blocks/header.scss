@@ -1,0 +1,166 @@
+.header {
+  background-image: url("../img/header-bg-triangle.svg"), url("../img/promo-bg-mask.png");
+  background-repeat: no-repeat;
+  background-position: 81.8% 70%, 0 0;
+  background-size: auto, 101% 98%;
+  background-color: $blue-dark;
+}
+
+.header__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 33px 11px 15px 25px;
+}
+
+.header__logo {
+  display: flex;
+}
+
+.header__logo svg {
+  margin-right: 16px;
+}
+
+.header__logo-text {
+  padding-top: 6px;
+}
+
+.header__logo-text p {
+  font-family: $main-regular;
+  font-size: 25px;
+  line-height: 29px;
+  color: $white;
+}
+
+.header__logo-text span {
+  display: block;
+  margin-top: 1px;
+
+  font-family: $medium;
+  font-size: 12px;
+  line-height: 14px;
+  color: #788891;
+}
+
+.header__contacts {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.header__list {
+  display: flex;
+  margin-right: 49px;
+
+  list-style: none;
+}
+
+.header__item:first-child {
+  margin-right: 87px;
+}
+
+.header__link {
+  display: flex;
+  align-items: center;
+
+  font-family: $main;
+  font-size: 16px;
+  line-height: 18px;
+  color: $white;
+}
+
+.header__link svg {
+  margin-right: 20px;
+}
+
+.header__link--phone svg {
+  margin-right: 16px;
+}
+
+.header__call {
+  padding: 13.5px 26.5px;
+
+  font-family: $main-bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $white;
+
+  border: 1px solid $white;
+  border-radius: 5px;
+}
+
+@media (max-width: $tablet-width) {
+  .header {
+    background-position: 457px 82px, 100% 100%;
+    background-size: 480px, cover;
+  }
+
+  .header__wrap {
+    padding: 20px 3.25%;
+  }
+
+  .header__contacts {
+    margin-bottom: 7px;
+  }
+
+  .header__list {
+    margin-right: 0;
+  }
+
+  .header__item:first-child {
+    margin-right: 0;
+  }
+
+  .header__link svg {
+    width: 26px;
+    height: 19px;
+    margin-top: 6px;
+    margin-right: 33px;
+  }
+
+  .header__link--phone svg {
+    width: 24px;
+    height: 24px;
+    margin-top: 3px;
+    margin-right: -2px;
+  }
+
+  .header__link span {
+    display: none;
+  }
+
+  .header__call {
+    display: none;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .header {
+    background-position: 168px 70px, 100% 100%;
+    background-size: 459px, cover;
+  }
+
+  .header__wrap {
+    padding: 17px 5%;
+  }
+
+  .header__logo svg {
+    width: 38px;
+    height: 38px;
+  }
+
+  .header__logo-text {
+    display: none;
+  }
+
+  .header__link svg {
+    margin-right: 23px;
+  }
+
+  .header__link--phone svg {
+    margin-right: -1px;
+  }
+}

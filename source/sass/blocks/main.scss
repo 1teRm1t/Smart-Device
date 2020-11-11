@@ -1,0 +1,24 @@
+.page-main {
+  background-image: url("../img/advantage-bg-triangle-small-left.svg"),
+    url("../img/advantage-bg-triangle-small-right.svg"),
+    url("../img/advantage-bg-triangle-big-right.svg"),
+    url("../img/advantage-bg-triangle-big-left.svg");
+  background-repeat: no-repeat;
+  background-position: 12% 4.5%, 99.5% 51%, 59% 49%, -13.7% 99%;
+  background-size: 12%, 12%, 26%, 26%;
+}
+
+@media (max-width: $tablet-width) {
+  .page-main {
+    background-image: url("../img/advantage-bg-triangle-big-right.svg");
+    background-position: 170% 52%;
+    background-size: 63%;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .page-main {
+    background-position: 193% 75%;
+    background-size: 75%;
+  }
+}

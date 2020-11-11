@@ -1,0 +1,136 @@
+.advantage__list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 112px 8% 60px 10%;
+
+  list-style: none;
+}
+
+.advantage__item {
+  width: 48%;
+  min-height: 299px;
+  margin-bottom: 32px;
+  padding: 39px 38px 65px 44px;
+
+  background-color: $white;
+  border: 1px solid #ebebeb;
+  border-left: 3px solid $blue;
+
+  &:nth-child(even) {
+    margin-left: 31px;
+  }
+}
+
+.advantage__item svg {
+  margin-bottom: 10px;
+
+  fill: $blue;
+}
+
+.advantage__item h3 {
+  margin-bottom: 16px;
+
+  font-family: $main-regular;
+  font-size: 24px;
+  line-height: 34px;
+
+  color: $blue;
+}
+
+.advantage__item p {
+  font-family: $main;
+  font-size: 16px;
+  line-height: 22px;
+
+  color: $grey;
+}
+
+@media (max-width: $tablet-width) {
+  .advantage__list {
+    padding: 53px 3% 22px;
+  }
+
+  .advantage__item {
+    min-height: 232px;
+    margin-bottom: 29px;
+    padding: 23px 20px 20px 26px;
+
+    &:nth-child(even) {
+      margin-left: 4%;
+    }
+  }
+
+  .advantage__item svg {
+    margin-bottom: 0;
+  }
+
+  .advantage__item:nth-child(0n +1) svg {
+    width: 29.38px;
+    height: 36px;
+  }
+
+  .advantage__item:nth-child(0n +2) svg {
+    width: 31px;
+  }
+
+  .advantage__item:nth-child(0n +3) svg {
+    width: 30px;
+  }
+
+  .advantage__item h3 {
+    margin-bottom: 7px;
+  }
+
+  .advantage__item:nth-child(0n +3) h3 {
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .advantage__list {
+    padding: 38px 4% 35px;
+  }
+
+  .advantage__item {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 17px 15px 20px 26px;
+
+    &:nth-child(even) {
+      margin-left: 0;
+    }
+
+    &:nth-child(0n +2) {
+      margin-bottom: 28px;
+      padding-right: 11px;
+    }
+  }
+
+  .advantage__item:nth-child(0n + 1) svg {
+    margin-top: 5px;
+    margin-bottom: 3px;
+  }
+
+  .advantage__item:nth-child(0n + 2) svg {
+    margin-top: 10px;
+  }
+
+  .advantage__item:nth-child(0n + 3) svg {
+    margin-top: 5px;
+  }
+
+  .advantage__item:nth-child(0n + 4) svg {
+    margin-top: 5px;
+  }
+
+  .advantage__item h3 {
+    margin-bottom: 8px;
+
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .advantage__item:nth-child(0n + 4) h3 {
+    margin-bottom: 17px;
+  }
+}
