@@ -1,4 +1,6 @@
-.page-main {
+.main {
+  flex: 1 0 auto;
+
   background-image: url("../img/advantage-bg-triangle-small-left.svg"),
     url("../img/advantage-bg-triangle-small-right.svg"),
     url("../img/advantage-bg-triangle-big-right.svg"),
@@ -9,7 +11,7 @@
 }
 
 @media (max-width: $tablet-width) {
-  .page-main {
+  .main {
     background-image: url("../img/advantage-bg-triangle-big-right.svg");
     background-position: 170% 52%;
     background-size: 63%;
@@ -17,7 +19,7 @@
 }
 
 @media (max-width: $mobile-width) {
-  .page-main {
+  .main {
     background-position: 193% 75%;
     background-size: 75%;
   }
