@@ -1,12 +1,16 @@
 .about__wrap {
   min-height: 320px;
-  margin: 11px 10% 90px 9.5%;
-  padding-left: 189px;
+  margin: 11px 10% 98px 9%;
+  padding-left: 188px;
 
   background-image: url("../img/about-year@1x.png");
   background-repeat: no-repeat;
   background-position: 11px 6px;
   background-size: auto 312px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/about-year@2x.png");
+  }
 }
 
 .about__wrap h2 {
@@ -45,11 +49,17 @@
 
   border: 1px solid $blue;
   border-radius: 5px;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
 }
 
 @media (max-width: $tablet-width) {
   .about__wrap {
-    margin: 0 3% 80px 2.3%;
+    margin: 0 3% 83px 2.3%;
     padding: 6px 0 0 195px;
 
     background-size: auto 355px;
@@ -71,13 +81,15 @@
 
     &:last-of-type {
       margin-bottom: 45px;
+
+      text-overflow: ellipsis;
     }
   }
 }
 
 @media (max-width: $mobile-width) {
   .about__wrap {
-    margin: 0 5% 60px;
+    margin: 0 5% 65px;
     padding: 3px 0 0 0;
 
     background-image: none;

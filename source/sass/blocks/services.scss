@@ -4,11 +4,11 @@
 
 .services__wrap {
   margin: 0 9.5%;
-  padding: 93px 0 107px;
+  padding: 88px 0 107px;
 }
 
 .services__wrap h2 {
-  margin-bottom: 60px;
+  margin-bottom: 52px;
 
   font-family: $main-regular;
   font-weight: 400;
@@ -50,6 +50,27 @@
 
   &--parts {
     background-image: url("../img/services-item-parts@1x.png");
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    .services__item {
+      &--production {
+        background-image: url("../img/services-item-production@2x.png");
+      }
+
+      &--montage {
+        background-image: url("../img/services-item-montage@2x.png");
+      }
+
+      &--parts {
+        background-image: url("../img/services-item-parts@2x.png");
+      }
+    }
   }
 }
 
@@ -102,11 +123,12 @@
 @media (max-width: $tablet-width) {
   .services__wrap {
     margin: 0 3.5%;
-    padding: 50px 0 78px;
+    padding: 50px 0 80px;
   }
 
   .services__wrap h2 {
-    width: 80%;
+    width: 85%;
+    margin-left: -1px;
     margin-bottom: 47px;
 
     font-size: 32px;
@@ -129,10 +151,19 @@
 
     &:last-of-type {
       margin-bottom: 0;
+      padding: 52px 43px;
     }
 
     &--production {
       background-image: url("../img/services-item-production-tablet@1x.png");
+    }
+  }
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    .services__item {
+      &--production {
+        background-image: url("../img/services-item-production-tablet@2x.png");
+      }
     }
   }
 }
@@ -140,7 +171,7 @@
 @media (max-width: $mobile-width) {
   .services__wrap {
     margin: 0 4%;
-    padding: 50px 0 65px;
+    padding: 50px 0 68px;
   }
 
   .services__wrap h2 {
@@ -158,6 +189,18 @@
 
     &--production {
       background-image: url("../img/services-item-production-mobile@1x.png");
+    }
+  }
+
+  .services__item:last-of-type {
+    padding: 33px 38px;
+  }
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    .services__item {
+      &--production {
+        background-image: url("../img/services-item-production-mobile@2x.png");
+      }
     }
   }
 }

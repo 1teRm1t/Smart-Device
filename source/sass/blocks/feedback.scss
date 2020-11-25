@@ -1,29 +1,30 @@
 .feedback {
   background-color: $blue;
-  background-image: url("../img/advantage-bg-triangle-small-left.svg"), url("../img/advantage-bg-triangle-small-right.svg");
+  background-image: url("../img/bg-contacts-airplane@1x.png"), url("../img/header-bg-triangle.svg"), url("../img/advantage-bg-triangle-small-left.svg"), url("../img/advantage-bg-triangle-small-right.svg");
   background-repeat: no-repeat;
-  background-position: 94% 20%, 105% 83%;
-  background-size: 9%, 15%;
+  background-position: 25% 42%, 15% 51%, 94% 20%, 105% 83%;
+  background-size: 26%, 32%, 9%, 15%;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-contacts-airplane@2x.png"), url("../img/header-bg-triangle.svg"), url("../img/advantage-bg-triangle-small-left.svg"), url("../img/advantage-bg-triangle-small-right.svg");
+  }
 }
 
 .feedback__wrap {
   position: relative;
 
-  padding: 93px 9.5% 102px;
-  background-image: url("../img/bg-contacts-airplane@1x.png"), url("../img/header-bg-triangle.svg");
-  background-repeat: no-repeat;
-  background-position: 12% 42%, 0 55%;
-  background-size: 35.5%, 43%;
+  padding: 85px 9.5% 103px;
 }
 
 .feedback__form {
   width: 50%;
   margin-left: auto;
-  padding: 5px 0 11px 12px;
+  padding: 6px 0 11px 15px;
 }
 
 .feedback__form h2 {
-  margin-bottom: 19px;
+  margin-left: -4px;
+  margin-bottom: 10px;
 
   font-family: $main-regular;
   font-size: 36px;
@@ -33,7 +34,7 @@
 }
 
 .feedback__form p {
-  margin-bottom: 52px;
+  margin-bottom: 48px;
 
   font-family: $main;
   font-size: 16px;
@@ -65,12 +66,17 @@
   background-color: rgba(255, 255, 255, 0.1);
   border: none;
   outline: none;
+
+  &:hover,
+  &:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
 }
 
 .feedback__form-wrap textarea {
   width: 100%;
-  min-height: 154px;
-  margin-bottom: 43px;
+  max-height: 154px;
+  margin-bottom: 47px;
   padding: 15px 16px;
 
   color: $white;
@@ -79,6 +85,11 @@
   border: none;
   outline: none;
   resize: none;
+
+  &:hover,
+  &:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
 }
 
 .feedback__form-wrap input::placeholder,
@@ -105,6 +116,11 @@
   border: 1px solid $white;
   border-radius: 5px;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
 }
 
 .feedback__form-consent {
@@ -141,9 +157,14 @@
 
     border: 1px solid $white;
   }
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
 }
 
-.feedback__form-consent input:checked+label::after {
+.feedback__form-consent input:checked + label::after {
   @include pseudo;
   top: 0;
   left: 0;
@@ -156,10 +177,17 @@
   background-position: 50%;
 }
 
+.feedback__form-consent input:checked + label {
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+}
+
 @media (max-width: 1580px) {
-  .feedback__wrap {
-    background-position: 10% 50%, 0 50%;
-    background-size: 25%, 40%;
+  .feedback {
+    background-position: 10% 50%, 0 50%, 94% 20%, 105% 83%;
+    background-size: 25%, 40%, 9%, 15%;
   }
 
   .feedback__form {
@@ -180,17 +208,17 @@
 
   .feedback__form {
     width: 100%;
-    padding: 0 65px;
+    padding: 0 68px;
   }
 
   .feedback__form h2 {
-    margin-bottom: 25px;
+    margin-bottom: 22px;
     font-size: 32px;
     line-height: 34px;
   }
 
   .feedback__form p {
-    margin: 0 0 57px 5px;
+    margin: 0 0 51px 2px;
   }
 
   .feedback__form-wrap input {
@@ -199,7 +227,7 @@
   }
 
   .feedback__form-wrap textarea {
-    margin-bottom: 49px;
+    margin-bottom: 52px;
     padding: 12px 19px 19px;
   }
 
@@ -215,8 +243,8 @@
 
 @media (max-width: $mobile-width) {
   .feedback__wrap {
-    margin: 0 4%;
-    padding: 32px 0 14px;
+    margin: 0 5%;
+    padding: 29px 0 42px;
   }
 
   .feedback__form {
@@ -224,13 +252,14 @@
   }
 
   .feedback__form h2 {
-    margin-bottom: 17px;
+    margin-bottom: 13px;
+    margin-left: -1px;
     font-size: 28px;
     line-height: 39px;
   }
 
   .feedback__form p {
-    margin: 0 0 28px 2px;
+    margin: 0 0 22px 0;
   }
 
   .feedback__form-wrap {
@@ -252,12 +281,24 @@
   .feedback__form-btn {
     width: 100%;
     max-width: 295px;
-    margin-bottom: 31px;
+    margin-bottom: 32px;
   }
 
   .feedback__form-consent {
     justify-content: center;
     width: 100%;
     padding: 0;
+  }
+
+  .feedback__form-consent label {
+    padding-left: 24px;
+
+    &::before {
+      left: -9px;
+    }
+  }
+
+  .feedback__form-consent input:checked + label::after {
+    left: -9px;
   }
 }
