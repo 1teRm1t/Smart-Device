@@ -18,7 +18,7 @@
   <header class="header">
     <div class="container">
       <div class="header__wrap">
-        <a class="header__logo" tabindex="1">
+        <a class="header__logo">
           <svg width="52" height="52">
             <use xlink:href="#icon-header-logo"></use>
           </svg>
@@ -281,17 +281,17 @@
     <div class="modal__wrap">
       <h2 class="modal__title">Закажите звонок</h2>
       <p class="modal__desc">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-      <button class="modal__close" aria-label="Закрыть окно"></button>
+      <button class="modal__close" aria-label="Закрыть окно" tabindex="5"></button>
       <form action="https://echo.htmlacademy.ru" method="post">
         <fieldset>
           <div class="modal__form-wrap">
             <label class="visually-hidden" for="modalName">Ваше имя:</label>
-            <input class="modal__form-input" id="modalName" name="modalName" type="text" placeholder="Имя" autocomplete="off" required="">
+            <input class="modal__form-input" id="modalName" name="modalName" type="text" placeholder="Имя" autocomplete="off" tabindex="1" required="">
             <label class="visually-hidden" for="modalPhone">Ваш номер телефона:</label>
-            <input class="modal__form-input" id="modalPhone" name="modalPhone" type="tel" placeholder="Телефон" autocomplete="off" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" required="">
+            <input class="modal__form-input" id="modalPhone" name="modalPhone" type="tel" placeholder="Телефон" autocomplete="off" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" tabindex="2" required="">
             <label class="visually-hidden" for="modalMessage">Ваш вопрос:</label>
-            <textarea class="modal__form-textarea" name="modalMessage" id="modalMessage" cols="30" rows="10" placeholder="Ваш вопрос" autocomplete="off"></textarea>
-            <button class="modal__form-btn" type="submit">Отправить</button>
+            <textarea class="modal__form-textarea" name="modalMessage" id="modalMessage" cols="30" rows="10" placeholder="Ваш вопрос" tabindex="3" autocomplete="off"></textarea>
+            <button class="modal__form-btn" type="submit" tabindex="4">Отправить</button>
             <div class="modal__field">
               <input class="visually-hidden" type="checkbox" id="consent" name="consent" checked="" required="">
               <label for="consent">Я согласен на обработку персональных данных</label>
