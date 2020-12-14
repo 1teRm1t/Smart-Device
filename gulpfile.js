@@ -32,8 +32,7 @@ gulp.task('css', function () {
 });
 
 gulp.task('scripts', function () {
-  return gulp.src('source/js/lib/*.js')
-      .pipe(concat('vendor.js'))
+  return gulp.src('source/js/vendor.js')
       .pipe(gulp.dest('build/js'));
 });
 
@@ -117,5 +116,5 @@ gulp.task('clean', function () {
   return del('build');
 });
 
-gulp.task('build', gulp.series('clean', 'copy', 'css', 'scripts', 'sprite', /* 'webp' ,*/ 'html', 'js'));
+gulp.task('build', gulp.series('clean', 'copy', 'css', 'sprite', 'html', 'js', 'scripts'));
 gulp.task('start', gulp.series('build', 'server'));

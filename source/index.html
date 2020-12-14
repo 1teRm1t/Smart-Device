@@ -161,7 +161,7 @@
                   <label class="visually-hidden" for="feedback-name">Ваше имя:</label>
                   <input type="text" id="feedback-name" name="name" placeholder="Имя" autocomplete="off" required>
                   <label class="visually-hidden" for="feedback-phone">Ваш номер телефона:</label>
-                  <input type="tel" id="feedback-phone" name="phone" placeholder="Телефон" autocomplete="off" required>
+                  <input type="tel" id="feedback-phone" name="phone" placeholder="Телефон" autocomplete="off" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" required>
                   <label class="visually-hidden" for="feedback-message">Ваш вопрос:</label>
                   <textarea id="feedback-message" name="feedback-message" cols="30" rows="10" placeholder="Ваш вопрос"
                     required></textarea>
@@ -220,40 +220,40 @@
             </ul>
           </div>
         </div>
-        <div class="footer__nav">
+        <div class="footer__nav footer__nav--nojs">
           <nav class="footer__nav-info">
-            <div class="footer__nav-title">
+            <div class="footer__nav-title footer__nav-title--info">
               <h2>Разделы сайта</h2>
               <button class="footer__nav-btn footer__nav-btn-info" aria-label="Раскрыть содержимое"></button>
             </div>
             <div class="footer__nav-links">
               <ul class="footer__nav-list">
                 <li>
-                  <a href="#">О компании</a>
+                  <a class="footer__nav-link footer__nav-link--company" href="#">О компании</a>
                 </li>
                 <li>
-                  <a href="#">Продукты</a>
+                  <a class="footer__nav-link" href="#">Продукты</a>
                 </li>
                 <li>
-                  <a href="#">Производство печатных плат</a>
+                  <a class="footer__nav-link footer__nav-link--production" href="#">Производство печатных плат</a>
                 </li>
                 <li>
-                  <a href="#">Монтаж печатных плат</a>
+                  <a class="footer__nav-link footer__nav-link--montage" href="#">Монтаж печатных плат</a>
                 </li>
                 <li>
-                  <a href="#">Комплектующие</a>
+                  <a class="footer__nav-link footer__nav-link--parts" href="#">Комплектующие</a>
                 </li>
                 <li>
-                  <a href="#">Доставка</a>
+                  <a class="footer__nav-link footer__nav-link--delivery" href="#">Доставка</a>
                 </li>
                 <li>
-                  <a href="#">Контакты</a>
+                  <a class="footer__nav-link footer__nav-link--contacts" href="#">Контакты</a>
                 </li>
               </ul>
             </div>
           </nav>
           <div class="footer__contact footer__contact--open">
-            <div class="footer__nav-title">
+            <div class="footer__nav-title footer__nav-title--contact">
               <h2>Наш офис</h2>
               <button class="footer__nav-btn footer__nav-btn-contact" aria-label="Раскрыть содержимое"></button>
             </div>
@@ -292,7 +292,7 @@
               autocomplete="off" required>
             <label class="visually-hidden" for="modalPhone">Ваш номер телефона:</label>
             <input class="modal__form-input" id="modalPhone" name="modalPhone" type="tel" placeholder="Телефон"
-              autocomplete="off" required>
+              autocomplete="off" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" required>
             <label class="visually-hidden" for="modalMessage">Ваш вопрос:</label>
             <textarea class="modal__form-textarea" name="modalMessage" id="modalMessage" cols="30" rows="10"
               placeholder="Ваш вопрос" autocomplete="off"></textarea>
@@ -311,7 +311,6 @@
     <include src="build/img/sprite_auto.svg"></include>
   </div>
 
-  <script>svg4everybody();</script>
   <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>
 </body>

@@ -14,7 +14,7 @@
 
 .footer__info {
   width: 20%;
-  min-width: 201px;
+  min-width: 200px;
   margin: 0 9% 0 10px;
   padding: 62px 0;
 }
@@ -117,6 +117,7 @@
 
 .footer__nav-list {
   width: 90%;
+  margin-left: -3px;
 
   column-count: 2;
   column-width: 150px;
@@ -124,7 +125,10 @@
   list-style: none;
 }
 
-.footer__nav-list a {
+.footer__nav-link {
+  display: inline-block;
+  vertical-align: top;
+
   font-family: $main;
   font-size: 15px;
   line-height: 26px;
@@ -136,6 +140,33 @@
   &:hover,
   &:focus {
     opacity: 1;
+  }
+
+  &--company {
+    margin-top: 5px;
+  }
+
+  &--production {
+    margin-top: -8px;
+  }
+
+  &--montage {
+    margin-top: -16px;
+  }
+
+  &--parts {
+    margin-top: 4px;
+    margin-left: 5px;
+  }
+
+  &--delivery {
+    margin-top: -1px;
+    margin-left: 5px;
+  }
+
+  &--contacts {
+    margin-top: -8px;
+    margin-left: 5px;
   }
 }
 
@@ -164,6 +195,7 @@
 
 .footer__contacts a {
   display: block;
+  max-width: 175px;
 
   &:hover,
   &:focus {
@@ -215,6 +247,37 @@
 
 .footer__copyright-wrap a:last-child {
   margin-left: auto;
+}
+
+@media (max-width: 1252px) and (min-width: 1024px) {
+  .footer__nav-link {
+    &--company {
+      margin-top: 0;
+    }
+
+    &--production {
+      margin-top: 0;
+    }
+
+    &--montage {
+      margin-top: 0;
+    }
+
+    &--parts {
+      margin-top: 0;
+      margin-left: 0;
+    }
+
+    &--delivery {
+      margin-top: 0;
+      margin-left: 0;
+    }
+
+    &--contacts {
+      margin-top: 0;
+      margin-left: 0;
+    }
+  }
 }
 
 @media (max-width: 1080px) {
@@ -287,11 +350,44 @@
   }
 
   .footer__nav-list {
+    margin-left: 0;
+
     column-count: 1;
   }
 
   .footer__nav-list li {
     margin-bottom: -7px;
+  }
+
+  .footer__nav-link {
+    vertical-align: middle;
+
+    &--company {
+      margin-top: 0;
+    }
+
+    &--production {
+      margin-top: 0;
+    }
+
+    &--montage {
+      margin-top: 0;
+    }
+
+    &--parts {
+      margin-top: 0;
+      margin-left: 0;
+    }
+
+    &--delivery {
+      margin-top: 0;
+      margin-left: 0;
+    }
+
+    &--contacts {
+      margin-top: 0;
+      margin-left: 0;
+    }
   }
 
   .footer__contact {
@@ -342,6 +438,15 @@
     padding: 0;
   }
 
+  .footer__nav--nojs .footer__nav-links,
+  .footer__nav--nojs .footer__contacts {
+    display: block;
+  }
+
+  .footer__nav--nojs .footer__nav-btn::after {
+    display: none;
+  }
+
   .footer__nav-info {
     width: 100%;
     padding: 0 4.5%;
@@ -359,6 +464,8 @@
     flex-direction: row;
     align-items: center;
     padding: 28px 0 27px;
+
+    cursor: pointer;
   }
 
   .footer__nav-title h2 {
@@ -374,7 +481,6 @@
 
     background-color: transparent;
     border: none;
-    outline: none;
     cursor: pointer;
 
     &::before {

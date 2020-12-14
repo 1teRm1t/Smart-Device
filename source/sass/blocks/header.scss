@@ -16,6 +16,7 @@
 
 .header__logo {
   display: flex;
+  min-width: 200px;
 
   cursor: pointer;
   outline: none;
@@ -59,13 +60,18 @@
 
 .header__list {
   display: flex;
+  flex-wrap: wrap;
   margin-right: 48px;
 
   list-style: none;
 }
 
-.header__item:first-child {
+.header__item:not(:last-of-type) {
   margin-right: 88px;
+}
+
+.header__item:nth-child(3n) {
+  margin-right: 0;
 }
 
 .header__link {
@@ -94,12 +100,14 @@
 }
 
 .header__call {
+  min-width: 180px;
   padding: 13.5px 26.5px;
 
   font-family: $main-bold;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.05em;
+  text-align: center;
   text-transform: uppercase;
   color: $white;
 
