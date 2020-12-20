@@ -18,7 +18,7 @@
 
 .promo__text h1 {
   margin-bottom: 27px;
-  padding-top: 57px;
+  padding-top: 52px;
 
   font-family: $main-bold;
   font-size: 80px;
@@ -102,6 +102,7 @@
 }
 
 .promo__img img {
+  margin-top: -5px;
   margin-left: 66px;
 }
 
@@ -118,6 +119,7 @@
 
   .promo__text h1 {
     min-height: 197px;
+    padding-top: 56px;
 
     font-size: 60px;
     line-height: 70px;
@@ -150,6 +152,7 @@
   }
 
   .promo__img img {
+    margin-top: 0;
     margin-left: 0;
   }
 
